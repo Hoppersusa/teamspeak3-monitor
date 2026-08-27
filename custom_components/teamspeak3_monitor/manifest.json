@@ -1,0 +1,14 @@
+{
+  "domain": "teamspeak3_monitor",
+  "name": "TeamSpeak 3 Monitor",
+  "version": "1.0.0",
+  "config_flow": true,
+  "documentation": "https://github.com/Hoppersusa/teamspeak3-monitor",
+  "issue_tracker": "https://github.com/Hoppersusa/teamspeak3-monitor/issues",
+  "codeowners": [
+    "@Hoppersusa"
+  ],
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "requirements": []
+}
