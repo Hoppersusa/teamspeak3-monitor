@@ -1,0 +1,10 @@
+TeamSpeak 3 Card for Home Assistant is adapted from MMM-teamspeak3:
+https://github.com/Thlb/MMM-teamspeak3
+
+The upstream behavior and configuration concepts are used under the MIT
+license. TeamSpeak is a trademark of TeamSpeak Systems GmbH; this project is
+not affiliated with or endorsed by TeamSpeak Systems GmbH.
+
+Upstream copyright notice:
+Copyright (c) 2016
+
