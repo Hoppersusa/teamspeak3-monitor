@@ -1,0 +1,75 @@
+{
+  "title": "TeamSpeak 3 Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to TeamSpeak ServerQuery",
+        "description": "Credentials stay in Home Assistant and are never sent to the dashboard browser. If a server ID is provided, it takes precedence over the voice port.",
+        "data": {
+          "host": "Server host",
+          "query_port": "ServerQuery port",
+          "username": "ServerQuery username",
+          "password": "ServerQuery password",
+          "voice_port": "Virtual server voice port",
+          "server_id": "Virtual server ID (optional)"
+        },
+        "data_description": {
+          "query_port": "The default raw ServerQuery port is 10011.",
+          "voice_port": "The default TeamSpeak voice port is 9987.",
+          "server_id": "Use this for hosted servers that identify the virtual server by ID."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Update ServerQuery credentials",
+        "description": "Authentication failed. Enter valid ServerQuery credentials.",
+        "data": {
+          "username": "ServerQuery username",
+          "password": "ServerQuery password"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure TeamSpeak 3 Monitor",
+        "description": "Update the connection and virtual-server selection.",
+        "data": {
+          "host": "Server host",
+          "query_port": "ServerQuery port",
+          "username": "ServerQuery username",
+          "password": "ServerQuery password",
+          "voice_port": "Virtual server voice port",
+          "server_id": "Virtual server ID (optional)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to ServerQuery. Check the host, port, firewall, and query allowlist.",
+      "invalid_auth": "ServerQuery rejected the username or password.",
+      "invalid_server": "Connected, but TeamSpeak rejected the virtual-server selection or client-list request.",
+      "already_configured": "This TeamSpeak virtual server is already configured."
+    },
+    "abort": {
+      "already_configured": "This TeamSpeak virtual server is already configured.",
+      "reauth_successful": "ServerQuery credentials were updated successfully.",
+      "reconfigure_successful": "TeamSpeak 3 Monitor was reconfigured successfully."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "TeamSpeak 3 Monitor options",
+        "data": {
+          "scan_interval": "Refresh interval"
+        },
+        "data_description": {
+          "scan_interval": "Seconds between client-list queries. Minimum: 5 seconds."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "online_clients": {
+        "name": "Online clients"
+      }
+    }
+  }
+}
